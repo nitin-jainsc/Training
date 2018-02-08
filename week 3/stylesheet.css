@@ -1,0 +1,313 @@
+body {
+    margin: 20px;
+    background-color: #E7DFDD;
+    /*STARK*/
+}
+/* div {
+    border: 1px solid;
+    padding: 2px;
+} */
+.container-fluid>div {
+    margin-bottom: 10px;
+}
+.stylish-input-group .input-group-addon {
+    background: white;
+}
+.stylish-input-group .form-control {
+    border-right: 0;
+    box-shadow: 0 0 0;
+    border-color: #ccc;
+}
+.stylish-input-group button {
+    border: 0;
+    background: transparent;
+}
+#searchRow {
+    color: #0E0B16;
+    /*VOID*/
+}
+#searchRow>.col-md-1 {
+    font-size: 32px;
+}
+#logout-btn {
+    width: 100%;
+}
+.full-width {
+    width: 100%;
+}
+#bankDetailsRow>.col-md-6:first-child>.row {
+    color: #E7DFDD;
+    background-color: #0E0B16;
+    height: 100%;
+}
+#bankDetailsRow>.col-md-6:first-child {
+    color: #E7DFDD;
+    background-color: #0E0B16;
+    border-right: 2px solid #E7DFDD;
+}
+#bankDetailsRow>.col-md-6:first-child+.col-md-6 {
+    border-left: 2px solid #E7DFDD;
+}
+.img-circle {
+    height: 150px;
+    width: 150px;
+    padding: 20px;
+    display: inline-flex;
+}
+#bankDetailsRow>.col-md-6:first-child>.row>.col-md-6>.row {
+    height: 50%;
+}
+#bankDetailsRow>.col-md-6>.row>.col-md-5>.row {
+    height: 100%;
+}
+#customer_name>span {
+    position: absolute;
+    bottom: 25px;
+}
+#profile_settings {
+    position: absolute;
+    top: 10px;
+}
+#profile_notifications {
+    position: absolute;
+    bottom: 10px;
+}
+.notify-badge {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: #E7DFDD;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color: #0E0B16;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+#bankDetailsRow>.col-md-6:first-child+.col-md-6>.row {
+    height: 100%;
+}
+#bankDetailsRow>.col-md-6:first-child+.col-md-6 {
+    color: #E7DFDD;
+    background-color: #4717F6;
+}
+.triple-div-uneven>.row:first-child {
+    height: 25%;
+}
+.triple-div-uneven>.row:first-child+.row {
+    height: 45%;
+}
+.triple-div-uneven>.row:first-child+.row+.row {
+    height: 30%;
+}
+.triple-div-even>.row {
+    height: 33.33333333%;
+}
+.divider>.row {
+    border-bottom: 1px solid #E7DFDD;
+}
+#account_row {
+    font-size: 36px;
+}
+#optionsRow>.row {
+    padding: 15px;
+    padding-left: 0px;
+    font-weight: bold;
+}
+@media (min-width: 768px) {
+    .seven-cols .col-md-1, .seven-cols .col-sm-1, .seven-cols .col-lg-1 {
+        width: 100%;
+        *width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .seven-cols .col-md-1, .seven-cols .col-sm-1, .seven-cols .col-lg-1 {
+        -ms-flex: 0 0 14.2857%;
+        flex: 0 0 14.2857%;
+        max-width: 14.2857%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .seven-cols .col-md-1, .seven-cols .col-sm-1, .seven-cols .col-lg-1 {
+        -ms-flex: 0 0 14.2857%;
+        flex: 0 0 14.2857%;
+        max-width: 14.2857%;
+    }
+}
+#iconBarRow>.col-md-1 {
+    text-align: center;
+    color: #E7DFDD;
+    background-color: #A239CA;
+}
+#iconBarRow>.col-md-1>a>i {
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: #E7DFDD;
+    font-size: 64px;
+}
+#iconBarRow>.col-md-1>a>span {
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: #E7DFDD;
+    font-weight: bold
+}
+#iconBarRow{
+    margin-bottom: 15px;
+}
+
+#iconBarRow>.col-md-1:first-child {
+    background-color: #0E0B16;
+}
+#iconBarRow>.col-md-1:first-child~.col-md-1>a>i {
+    font-size: 32px;
+    padding-top: 20px;
+}
+
+#iconBarRow>.col-md-1:first-child~.col-md-1>a>span {
+    font-size: 24px;
+}
+
+.extended-caret {
+    color: #0E0B16;
+    font-size: 20px;
+    position: absolute;
+    bottom: -25px;
+    right: 45%;
+}
+#iconBarRow>.col-md-1:hover{
+    background-color: #0E0B16;
+    text-decoration:none;
+}
+a:hover{
+    text-decoration: none;
+}
+.cent{
+    height: 100%;
+}
+#bankModulesRow{
+    background-color: #4717F6;
+    color: #E7DFDD;
+    font-size: 16px;
+    font-weight: bold;
+}
+#bankModulesRow>.col-md-3:hover{
+    background-color: #0E0B16;
+}
+#bankModulesRow>.col-md-3:first-child{
+    background-color: #0E0B16;
+}
+#creditCardNo,#urgentPaymentReminder,#investmentReminder,#documentReceived{
+    font-size: 20px;
+    font-weight: 100;
+}
+#creditCardDetails,#urgentPaymentDetails,#investmentDetails,#documentDetails{
+    font-size: 14px;
+    font-weight: 100;
+    
+}
+.button-col{
+    padding:10px 0px 10px 0px;
+    position: absolute;
+    bottom: 0px;
+    right: 10px; 
+}
+#creditCardCol,#pendingPayCol,#investmentsCol,#documentsCol{
+    border: 1px solid #E7DFDD;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#productImage{
+    position: relative;
+    width:100%;
+    height:100%;
+    padding: 0px;
+}
+#servicesAndProducts{
+    background-color: #0E0B16;
+    color: #E7DFDD;
+}
+#servicesAndProducts>.row:first-child{
+    background-color: #0E0B16;
+    /* font-weight: bold; */
+    /* font-size: 20px; */
+    padding: 6px;
+}
+#featureCol1>.row:first-child+.row{
+    background-color: #A239CA;
+    color: #E7DFDD;
+    border-top: 2px solid;
+}
+#featureCol1>.row:first-child+.row>.col-md-6:first-child{
+    border-right: 2px solid;
+}
+#productDetails{
+    font-size: 42px;
+}
+#productBtn{
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+}
+.padded-center{
+    text-align: center;
+    padding: 5px;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+.margined-info{
+    background-color: #0E0B16;
+    margin: 10px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    background-color: #E7DFDD;
+    color: #0E0B16;
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 2px;
+}
+.margined-info>.col-md-10{
+    text-align: left;
+}
+#calender>.row:first-child,#marketAndStock>.row:first-child{
+    padding: 6px;
+    font-weight: bold
+}
+#footerRow{
+    background-color: #0E0B16;
+    color: #E7DFDD;
+}
+#footerRow>.col-md-6:first-child{
+    font-size: 32px;
+}
+#historyBar{
+    background-color: #0E0B16;
+    color: #ccc;
+}
+#historyDataContainer{
+    background-color: #A239CA;
+    color: #E7DFDD;
+}
+#historyDataContainer>.row{
+    border-bottom: 1px solid;
+    padding: 4px;
+}
+#historyExtended{
+    background-color: #0E0B16;
+    color: #E7DFDD;
+    padding: 10px;
+    font-size: 14px;
+}
+#addOns{
+    background-color: #4717F6;
+    color: #E7DFDD;
+}
+#addOns>.col-md-6>.row:first-child{
+    padding: 10px;
+}
+#transactionAnalysis{
+    background-color: #A239CA;
+    color: #E7DFDD;
+    padding: 2px;
+}

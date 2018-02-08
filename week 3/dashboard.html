@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Welcome to MyBank</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <script src="jsScript.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--////////////////////// SEARCH ROW ///////////////////////////-->
+        <div class="row" id="searchRow">
+            <div class="col-md-1">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="col-md-5" style="text-align: right; font-size:32px">
+                <i class="fa fa-minus"></i>
+                <i class="fa fa-minus"></i>
+                <i class="fa fa-minus"></i>
+            </div>
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-3 col-md-offset-3">
+
+                <div id="imaginary_container">
+                    <div class="input-group stylish-input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-addon">
+                            <button type="submit">
+                                <span class="fa fa-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <div id="logout_container">
+                    <div class="input-group stylish-input-group">
+                        <span class="input-group-addon full-width">
+                            <button type="submit" id="logout-btn">
+                                Logout
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--////////////////// END OF SEARCH ROW ////////////////////////-->
+
+        <!-- /////////////BEGINNING OF BANK DETAILS ROW /////////////////-->
+        <div class="row" id="bankDetailsRow">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12" style="font-size: 36px">
+                                <strong>
+                                    MyBank
+                                </strong>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                Welcome to mybank,
+                                <br> Your last login time is
+                                <span id="last_login">timestamp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-8 profile-image">
+                                <a href="#">
+                                    <span class="notify-badge" id="notify_user">0</span>
+                                    <img src="profile.png" class="img-circle img-fluid rounded-circle">
+                                </a>
+                            </div>
+                            <div class="col-md-4" id="customer_name">
+                                <span>Name Holder</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <i class="fa fa-cog" id="profile_settings"></i>
+                        <i class="fa fa-bell" id="profile_notifications"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6 triple-div-uneven">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <strong>
+                                    YOUR PREMIERE ACCOUNT
+                                </strong>
+                            </div>
+                        </div>
+                        <div class="row" id="account_row">
+                            <div class="col-md-12">
+                                <strong>
+                                    £
+                                    <span id="account_balance">0</span>
+                                </strong>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <select class="form-control" name="accountType" id="accountType">
+                                        <option selected disabled>YOUR ACCOUNT TYPE</option>
+                                        <option>Current Account</option>
+                                        <option>Savings Account</option>
+                                        <option>Salary Account</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 triple-div-even divider" id="optionsRow">
+                        <div class="row ">
+                            > VIEW STATEMENT
+                        </div>
+                        <div class="row ">
+                            MAKE A QUICK TRANSFERS
+                        </div>
+                        <div class="row " style="border-bottom:0px; ">
+                            MORE OPTIONS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//////////////// END OF BANK DETAILS ROW ///////////////////-->
+
+        <!--////////////// BEGINNING OF ICON BAR ROW ///////////////////-->
+        <div class="row seven-cols" id="iconBarRow">
+
+            <div class="col-md-1">
+                <a href="#">
+                    <i class="fa fa-plus-circle"></i>
+                    <br>
+                    <span>Take a Look</span>
+                </a>
+                <i class="fa fa-caret-down fa-3x extended-caret"></i>
+            </div>
+            <div class="col-md-1">
+                <a href="#">
+                    <i class="fa fa-circle"></i>
+                    <br>
+                    <span>Account</span>
+                </a>
+            </div>
+            <div class="col-md-1">
+                <a href="#">
+                    <i class="fa fa-circle"></i>
+                    <br>
+                    <span>Overdraft</span>
+                </a>
+            </div>
+            <div class="col-md-1">
+                <a href="#">
+                    <i class="fa fa-circle"></i>
+                    <br>
+                    <span>Credit</span>
+                </a>
+            </div>
+            <div class="col-md-1">
+                <a href="#">
+                    <i class="fa fa-circle"></i>
+                    <br>
+                    <span>Payments</span>
+                </a>
+            </div>
+            <div class="col-md-1">
+                <a href="#">
+                    <i class="fa fa-circle"></i>
+                    <br>
+                    <span>Deposits</span>
+                </a>
+            </div>
+            <div class="col-md-1">
+                <a href="#">
+                    <i class="fa fa-circle"></i>
+                    <br>
+                    <span>Cards</span>
+                </a>
+            </div>
+        </div>
+        <!--/////////////////// END OF ICON BAR ROW ////////////////////-->
+
+        <!--/////////////// BEGINNING OF BANK MODULES ROW //////////////-->
+        <div class="row" id="bankModulesRow">
+            <div class="col-md-3" id="creditCardCol">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-12">
+                                Credit Card
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" id="creditCardNo">
+                                **** **** **** 3234
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" id="creditCardDetails">
+                                Total Credit Card Limit : £
+                                <span id="cardLimit">0</span>
+                                <br> Available : £
+                                <span id="creditAvailable">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 button-col">
+                        <button type="button" class="btn btn-default btn-sm btn-block">BUTTON</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" id="pendingPayCol">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-12">
+                                Urgent Pending Payment
+                            </div>
+                        </div>
+                        <div class="row" id="urgentPaymentReminder">
+                            <div class="col-md-12">
+                                £
+                                <span id="urgentPayment">0</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" id="urgentPaymentDetails">
+                                Monthly Pending Payments
+                                <br> Total : £
+                                <span id="paymentRemaining">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 button-col">
+                        <button type="button" class="btn btn-default btn-sm btn-block">PAY NOW</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" id="investmentsCol">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-12">
+                                Investments
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" id="investmentReminder">
+                                £
+                                <span id="investmentsMade">0</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" id="investmentDetails">
+                                <br> Total : £
+                                <span id="investmentRemaining">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 button-col">
+                        <button type="button" class="btn btn-default btn-sm btn-block">DETAILS</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" id="documentsCol">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-12">
+                                Documents
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" id="documentReceived">
+                                <span id="documentCounter">0</span> new documents
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" id="documentDetails">
+                                <br>
+                                <span id="documentCounter">0</span> important
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 button-col">
+                        <button type="button" class="btn btn-default btn-sm btn-block">DETAILS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/////////////////// END OF BANK MODULES ROW ////////////////-->
+
+        <!--//////////////// BEGINNING OF FEATURES ROW /////////////////-->
+        <div class="row" id="featuresRow">
+            <div class="col-md-6" id="featureCol1">
+                <div class="row">
+                    <div class="col-md-12" id="servicesAndProducts">
+                        <div class="row">
+                            OUR SERVICES AND PRODUCTS
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6" id="productDetails">
+                                <span id="productName" style="font-weight: bold">Product Name</span>
+                                <span id="productInfo"></span>
+                                <br>
+                                <button type="button" class="btn btn-default btn-sm btn-block" id="productBtn">DETAILS</button>
+                            </div>
+                            <div class="col-md-6" style="padding:0px">
+                                <img src="mountain.png" id="productImage">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" id="calender">
+                        <div class="row">
+                            CALENDER
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 padded-center">
+                                <i class="fa fa-calendar" style="font-size:256px;"></i>
+                                <div class="row margined-info">
+                                    <div class="col-md-2">
+                                        <i class="fa fa-circle"></i>
+                                    </div>
+                                    <div class="col-md-10">
+                                        Important dates of month for payment </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6" id="marketAndStock">
+                        <div class="row">
+                            STOCK MARKET
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 padded-center">
+                                <i class="fa fa-briefcase" style="font-size:256px;"></i>
+                                <div class="row margined-info">
+                                    <div class="col-md-2">
+                                        <i class="fa fa-circle"></i>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="featureCol2">
+                <div class="row">
+                    <div class="col-md-12" id="transactionHistory">
+                        <div class="row" id="historyBar">
+                            <div class="col-md-1" style="padding:10px;">
+                                <i class="fa fa-credit-card"></i>
+                            </div>
+                            <div class="col-md-4" style="padding:10px;">
+                                TRANSACTIONS
+                            </div>
+                            <div class="col-md-3" style="padding:10px;">
+                                Spend by
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group" style="margin-bottom:2px;margin-top:2px;">
+                                    <select class="form-control" name="accountType" id="transactionSpendBy">
+                                        <option>Month</option>
+                                        <option>Quarter</option>
+                                        <option>Year</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="historyData">
+                            <div class="col-md-12" id="historyDataContainer">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        Today
+                                    </div>
+                                    <div class="col-md-8">
+                                        Card Transaction - Paypal - 22/01/18
+                                    </div>
+                                    <div class="col-md-2">
+                                        £-32
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        Today
+                                    </div>
+                                    <div class="col-md-8">
+                                        Card Transaction - Paypal - 22/01/18
+                                    </div>
+                                    <div class="col-md-2">
+                                        £-32
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        Today
+                                    </div>
+                                    <div class="col-md-8">
+                                        Card Transaction - Paypal - 22/01/18
+                                    </div>
+                                    <div class="col-md-2">
+                                        £-32
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        Today
+                                    </div>
+                                    <div class="col-md-8">
+                                        Card Transaction - Paypal - 22/01/18
+                                    </div>
+                                    <div class="col-md-2">
+                                        £-32
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        Today
+                                    </div>
+                                    <div class="col-md-8">
+                                        Card Transaction - Paypal - 22/01/18
+                                    </div>
+                                    <div class="col-md-2">
+                                        £-32
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        Today
+                                    </div>
+                                    <div class="col-md-8">
+                                        Card Transaction - Paypal - 22/01/18
+                                    </div>
+                                    <div class="col-md-2">
+                                        £-32
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        Today
+                                    </div>
+                                    <div class="col-md-8">
+                                        Card Transaction - Paypal - 22/01/18
+                                    </div>
+                                    <div class="col-md-2">
+                                        £-32
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        Today
+                                    </div>
+                                    <div class="col-md-8">
+                                        Card Transaction - Paypal - 22/01/18
+                                    </div>
+                                    <div class="col-md-2">
+                                        £-32
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        Today
+                                    </div>
+                                    <div class="col-md-8">
+                                        Card Transaction - Paypal - 22/01/18
+                                    </div>
+                                    <div class="col-md-2">
+                                        £-32
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        Today
+                                    </div>
+                                    <div class="col-md-8">
+                                        Card Transaction - Paypal - 22/01/18
+                                    </div>
+                                    <div class="col-md-2">
+                                        £-32
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="historyExtended">
+                            <div class="col-md-6">
+                                10+ See more transactions
+                            </div>
+                            <div class="col-md-6" style="text-align:right;">
+                                All transactions in January
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="transactionAnalysis" style="padding:10px; border-left:1px solid;">
+                    <div class="col-md-5">
+                        <span>TOTAL SPENDINGS OF JANUARY</span>
+                        <br>
+                        <i class="fa fa-plus-circle" style="font-size:64px"></i>
+                    </div>
+                    <div class="col-md-2">
+                        <span>LIVING</span>
+                        <br><br>
+                        <i class="fa fa-home" style="font-size:64px"></i>
+                    </div>
+                    <div class="col-md-2">
+                        <span>FAMILY</span>
+                        <br><br>
+                        <i class="fa fa-car" style="font-size:64px"></i>
+                    </div>
+                    <div class="col-md-3">
+                        <span>FOOD & DRINK</span>
+                        <br><br>
+                        <i class="fa fa-plus-circle" style="font-size:64px"></i>
+                    </div>
+                </div>
+                <div class="row" id="addOns" style="border-left:1px solid;border-top:1px solid;">
+                    <div class="col-md-6" id="customerSurveyForm">
+                        <div class="row">
+                            CUSTOMER SURVEY
+                        </div>
+                        <div class="row">
+                            <input type="text" class="form-control" style="margin:4px;">
+                        </div>
+                        <div class="row" style="padding:6px;">
+                            <label>
+                                <input type="radio" name="optradio">&nbsp;&nbsp;Option A</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label>
+                                <input type="radio" name="optradio">&nbsp;&nbsp;Option B</label>
+                        </div>
+                        <div class="row">
+                            <button type="button" class="btn btn-default btn-sm btn-block" style="margin:4px;">SUBMIT</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6" id="currencyCalculator" style="border-left:1px solid;">
+                        <div class="row">
+                            CURRENCY
+                        </div>
+                        <div class="row" style="padding-top:4px;">
+                            <div class="col-md-6" >
+                                <select class="form-control" style="padding:2px;">
+                                    <option disabled>Select</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6" >
+                                <select class="form-control" style="padding:2px;">
+                                    <option disabled>Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row" style=padding-top:1px;>
+                            <input type="text" class="form-control" style="margin:4px;" placeholder="to Currency">
+                        </div>
+                        <div class="row">
+                            <button type="button" class="btn btn-default btn-sm btn-block" style="margin:4px;">SUBMIT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--//////////////////// END OF FEATURES ROW ///////////////////-->
+
+        <!--///////////////////// START OF FOOTER //////////////////////-->
+        <div class="row" id="footerRow">
+            <div class="col-md-6">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="col-md-6" style="text-align: right; font-size:32px">
+                <i class="fa fa-minus"></i>
+                <i class="fa fa-minus"></i>
+                <i class="fa fa-minus"></i>
+            </div>
+        </div>
+        <!--/////////////////////// END OF FOOTER //////////////////////-->
+    </div>
+
+    <!-- Optional JavaScript -->
+    <link rel="stylesheet " href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
+        crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js " integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh "
+        crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js " integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ "
+        crossorigin="anonymous "></script>
+</body>
+
+</html>
