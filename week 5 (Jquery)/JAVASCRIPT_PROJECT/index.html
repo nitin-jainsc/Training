@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CURRENCY DASHBOARD</title>
+    <link rel="stylesheet" type="text/css" href="/build/styles.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid" style="height:100vh">
+        <div class="row">
+            <nav class="col-sm-2" style="padding:0px;min-height:100vh;" >
+                <ul class="nav nav-pills nav-stacked" data-spy="affix" id="dashboardSidebar">
+                    <li style="color:white;font-weight:bolder;background-color: #605052;">
+                        CRYPTO COMPARE
+                    </li>
+                    <li>
+                        <a href="#section1">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#section2">Currency Overview</a>
+                    </li>
+                    <li>
+                        <a href="#section3">Currency Compare</a>
+                    </li>
+                    <li>
+                        <a href="#section4">Currency Calculator</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="col-md-10" id="viewPoint">
+                <div class="row" id="section1">
+                    <div class="col-md-12">
+                        <div class="row" id="topByValue">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12" style="text-align:center;font-style:italic;">
+                                        TOP CURRENCIES BY VALUE
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <canvas id="topCurrencyByValue"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row" id="topBySocialMedia">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12" style="text-align:center;font-style:italic;">
+                                        TOP CURRENCIES BY SOCIAL MEDIA
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <canvas id="topCurrencyBySocial"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row hide" id="section2">
+                    <div class="col-md-12">
+                        <div class="row" id="coinChartAnalysisArea">
+                            <div class="col-md-8">
+                                CHART FOR THE CRYPTOCURRENCY MARKET ANALYSIS
+                            </div>
+                            <div class="col-md-4">
+                                ANALYSIS STATS
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                CRYPTOCURRENCY INFORMATION
+                            </div>
+                            <div class="col-md-6">
+                                CURRENCY GENERAL STATS
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row hide" id="section3">
+                    <div class="col-md-6">
+                        CURRENCY 1 STATS
+                    </div>
+                    <div class="col-md-6">
+                        CURRENCY 2 STATS
+                    </div>
+                </div>
+                <div class="row hide" id="section4">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12" style="text-align:center;">
+                                <h2>Currency converter and calulator</h2>
+                                <p>Check the value of your currency in term of another currency</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="fromCurrency">From (select one):</label>
+                                    <select class="form-control" id="fromCurrency">
+                                        <option disabled>Choose ...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="toCurrency">To (select one):</label>
+                                    <select class="form-control" id="toCurrency">
+                                        <option disabled>Choose ...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="fromVal">Value of Currency 1</label>
+                                    <input type="text" name="fromVal" id="fromVal" class="form-control" placeholder="Enter amount">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="toVal">Result</label>
+                                    <input type="text" name="toVal" id="toVal" class="form-control" placeholder="Enter amount">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="getResult"></label>
+                            <button id="getResult" name="getResult">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./build/app.bundle.js"></script>
+</body>
+
+</html>
