@@ -1,9 +1,8 @@
 import {
     activeViewLoader
 } from "./viewLoader"
+
 export const activeViewFetcher = (() => {
-    
-    
     let loadView = (anchor) => {
         activeViewLoader.loadView(anchor);
 

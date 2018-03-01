@@ -1,14 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
 @import "custom";
-// body>div,
-// body>div>div {
-//   border: none;
-// }
-
-// div {
-//   border: 1px solid black;
-//   padding: 10px;
-// }
 
 .affix {
   top: 20px;
@@ -17,14 +8,12 @@
 
 .hide {
   display: none;
-} // body{
-//   background-color: gray;
-// }
+} 
+
 nav {
   background-color: #2e242c;
   font-size: 18px;
 }
-
 
 li {
   padding: 10px;

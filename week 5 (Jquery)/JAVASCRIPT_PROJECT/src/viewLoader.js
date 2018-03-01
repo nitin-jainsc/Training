@@ -1,3 +1,4 @@
+require("jquery")
 import {
     activeChartLoader
 } from "./chartLoader"
@@ -7,6 +8,7 @@ import {
 } from "./currencySelector";
 
 export const activeViewLoader = (() => {
+    
     let section1 = async () => {
         console.log("IN LOAD TOP CURRENCY BY VALUE");
         let top10CurrencyByValue;
@@ -26,8 +28,8 @@ export const activeViewLoader = (() => {
         let labelBySocial = top10CurrencyBySocial.map((obj) => obj.coin);
         let dataBySocial = top10CurrencyBySocial.map((obj) => obj.likes);
         activeChartLoader.loadChart(ctxSocial, "bar", labelBySocial, dataBySocial);
-
     }
+
     let section2 = () => {
         console.log("section2");
         activeChartLoader.loadChart("area")
@@ -35,12 +37,22 @@ export const activeViewLoader = (() => {
     }
     let section3 = () => {
         console.log("section3");
-
+        
     }
     let section4 = async () => {
-        console.log("hello");
+        let coinlist;
+        await $.getJSON("https://www.cryptocompare.com/api/data/coinlist/",(data)=>{coinlist=data.Data})
+        let ddList=[];
+        $("#toCurrency").html($("<option disabled></option>"));
+        $("#fromCurrency").html($("<option disabled></option>"));
+        $.each(coinlist,(data)=>{
+            $("#toCurrency").append($("<option></option>").attr("value",data).text(data));
+            $("#fromCurrency").append($("<option></option>").attr("value",data).text(data));
+        })
+        console.log($("#toCurrency"));
         
-
+        
+        
     }
     return {
         loadView(section) {
