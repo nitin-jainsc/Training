@@ -8,26 +8,43 @@ import {
 } from "./currencySelector";
 
 export const activeViewLoader = (() => {
-    
-    let section1 = async () => {
-        console.log("IN LOAD TOP CURRENCY BY VALUE");
-        let top10CurrencyByValue;
-        await fetchCurrency.getTop10CurrencyByValue().then((data) => {
-            top10CurrencyByValue = data;
-        });
-        let ctx = document.getElementById("topCurrencyByValue").getContext('2d');
-        let labelByValue = top10CurrencyByValue.map((obj) => obj.coin);
-        let dataByValue = top10CurrencyByValue.map((obj) => obj.value);
-        activeChartLoader.loadChart(ctx, "bar", labelByValue, dataByValue);
 
-        let top10CurrencyBySocial;
-        await fetchCurrency.getTop10CurrencyBySocial().then(
-            (data) => top10CurrencyBySocial = data
-        ).catch((e) => console.log(e))
-        let ctxSocial = document.getElementById("topCurrencyBySocial").getContext('2d');
-        let labelBySocial = top10CurrencyBySocial.map((obj) => obj.coin);
-        let dataBySocial = top10CurrencyBySocial.map((obj) => obj.likes);
-        activeChartLoader.loadChart(ctxSocial, "bar", labelBySocial, dataBySocial);
+    let section1 = () => {
+        console.log("IN LOAD TOP CURRENCY BY VALUE");
+        // Async function to fetch and load top 10 cryptocurrencies by value and facebook likes
+
+        if (sessionStorage.getItem("topCurrByValue") == undefined || sessionStorage.getItem("topCurrBySocial") == undefined) {
+            fetchCurrency.getTop10CurrencyByValue().then((top10CurrencyByValue) => {
+                let ctx = document.getElementById("topCurrencyByValue").getContext('2d');
+                let labelByValue = top10CurrencyByValue.map((obj) => obj.coin);
+                let dataByValue = top10CurrencyByValue.map((obj) => obj.value);
+                sessionStorage.setItem("topCurrByValue", JSON.stringify(top10CurrencyByValue));
+                activeChartLoader.loadChart(ctx, "bar", labelByValue, dataByValue);
+            }).catch((e) => console.log(e));
+
+            fetchCurrency.getTop10CurrencyBySocial().then((top10CurrencyBySocial) => {
+                let ctxSocial = document.getElementById("topCurrencyBySocial").getContext('2d');
+                let labelBySocial = top10CurrencyBySocial.map((obj) => obj.coin);
+                let dataBySocial = top10CurrencyBySocial.map((obj) => obj.likes);
+                sessionStorage.setItem("topCurrBySocial", JSON.stringify(top10CurrencyBySocial));
+                activeChartLoader.loadChart(ctxSocial, "bar", labelBySocial, dataBySocial);
+            }).catch((e) => console.log(e))
+
+        } else {
+            let top10CurrencyByValue = JSON.parse(sessionStorage.getItem("topCurrByValue"));
+            let ctx = document.getElementById("topCurrencyByValue").getContext('2d');
+            let labelByValue = top10CurrencyByValue.map((obj) => obj.coin);
+            let dataByValue = top10CurrencyByValue.map((obj) => obj.value);
+            activeChartLoader.loadChart(ctx, "bar", labelByValue, dataByValue);
+
+            let top10CurrencyBySocial = JSON.parse(sessionStorage.getItem("topCurrBySocial"));
+            let ctxSocial = document.getElementById("topCurrencyBySocial").getContext('2d');
+            let labelBySocial = top10CurrencyBySocial.map((obj) => obj.coin);
+            let dataBySocial = top10CurrencyBySocial.map((obj) => obj.likes);
+            activeChartLoader.loadChart(ctxSocial, "bar", labelBySocial, dataBySocial);
+        }
+
+
     }
 
     let section2 = () => {
@@ -37,23 +54,21 @@ export const activeViewLoader = (() => {
     }
     let section3 = () => {
         console.log("section3");
-        
+
     }
-    let section4 = async () => {
-        let coinlist;
-        await $.getJSON("https://www.cryptocompare.com/api/data/coinlist/",(data)=>{coinlist=data.Data})
-        let ddList=[];
-        $("#toCurrency").html($("<option disabled></option>"));
-        $("#fromCurrency").html($("<option disabled></option>"));
-        $.each(coinlist,(data)=>{
-            $("#toCurrency").append($("<option></option>").attr("value",data).text(data));
-            $("#fromCurrency").append($("<option></option>").attr("value",data).text(data));
+    let section4 = () => {
+        $.getJSON("https://www.cryptocompare.com/api/data/coinlist/", (data) => {
+            let coinlist = data.Data
+            let ddList = [];
+            $("#toCurrency").html($("<option disabled></option>"));
+            $("#fromCurrency").html($("<option disabled></option>"));
+            $.each(coinlist, (data) => {
+                $("#toCurrency").append($("<option></option>").attr("value", data).text(data));
+                $("#fromCurrency").append($("<option></option>").attr("value", data).text(data));
+            })
         })
-        console.log($("#toCurrency"));
-        
-        
-        
     }
+    
     return {
         loadView(section) {
             switch (section) {
