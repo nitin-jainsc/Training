@@ -22,9 +22,9 @@
                     <li>
                         <a href="#section1">Dashboard</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#section3">Currency Compare</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="#section4">Currency Calculator</a>
                     </li>
@@ -86,11 +86,45 @@
                     </div>
                 </div>
                 <div class="row hide" id="section3">
-                    <div class="col-md-6">
-                        CURRENCY 1 STATS
-                    </div>
-                    <div class="col-md-6">
-                        CURRENCY 2 STATS
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12" style="text-align:center;">
+                                <h2>Currency Comparator</h2>
+                                <p>Compare two currencies side by side </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="toCurrencyCompare">From (select one):</label>
+                                            <select class="form-control" id="toCurrencyCompare">
+                                                <option disabled>Choose ...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="groupAContainer">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="fromCurrencyCompare">From (select one):</label>
+                                            <select class="form-control" id="fromCurrencyCompare">
+                                                <option disabled>Choose ...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="groupBContainer">
+                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row hide" id="section4">

@@ -53,7 +53,15 @@ export const activeViewLoader = (() => {
 
     }
     let section3 = () => {
-        console.log("section3");
+        $.getJSON("https://www.cryptocompare.com/api/data/coinlist/", (data) => {
+            let coinlist = data.Data
+            $("#toCurrencyCompare").html($("<option disabled></option>"));
+            $("#fromCurrencyCompare").html($("<option disabled></option>"));
+            $.each(coinlist, (data) => {
+                $("#toCurrencyCompare").append($("<option></option>").attr("value", data).text(data));
+                $("#fromCurrencyCompare").append($("<option></option>").attr("value", data).text(data));
+            })
+        })
 
     }
     let section4 = () => {
