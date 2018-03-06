@@ -76,18 +76,12 @@ export const dataFetchApi = (() => {
             for (let index = 0; index < /*bundledData.length  ---too large*/200; index++) {
 
                 setIdParam(bundledData[index])
-                console.log(bundledData[index]);
-
                 urlParams = generateUrlParams.encodeObjectToUrlParam(idParam);
-                console.log(urlParams);
-
                 await this.fetchData(url + urlParams).then((data) => {
-                    
                     parallelDataArray.push(data);
                 })
 
             }
-            console.log(parallelDataArray)
             return parallelDataArray
         }
     }
